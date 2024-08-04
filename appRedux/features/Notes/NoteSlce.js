@@ -3,7 +3,7 @@ import { createSlice , createAsyncThunk} from '@reduxjs/toolkit'
 const SaveNote = createAsyncThunk( 
     "notes/SaveNote",
     async (Note)=>{
-           
+          // save notes locally 
     }
  )
 

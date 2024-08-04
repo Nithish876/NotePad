@@ -18,6 +18,6 @@ export const getJsonValue = (key)=>{
             return JSON.parse(value)
         })
     } catch (error) {
-        
+        console.log(error)
     }
 }
