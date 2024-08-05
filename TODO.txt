@@ -1,5 +1,6 @@
 *** Notepad *** 
 
 * nativewind ui 
-** passkey security 
-** 
+* passkey security 
+* premium customizations 
+* 

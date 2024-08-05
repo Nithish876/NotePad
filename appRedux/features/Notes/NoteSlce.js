@@ -1,9 +1,13 @@
 import { createSlice , createAsyncThunk} from '@reduxjs/toolkit'
+import { getJsonValue, setJsonValue } from '../../../hooks/useStorage'
 
 const SaveNote = createAsyncThunk( 
     "notes/SaveNote",
-    async (Note)=>{
+    async (Note,thunkAPI)=>{
           // save notes locally 
+          // get the whole notes before saving induvidual note 
+          const oldNotes = getJsonValue("notes").then((value)=>value)
+          setJsonValue({...oldNotes,Note},'notes')
     }
  )
 

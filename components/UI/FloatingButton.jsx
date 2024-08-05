@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { Ionicons } from '@expo/vector-icons'
 
-const FloatingButton = () => {
+const FloatingButton = (props) => {
   return (
-    <View>
-      <Text>FloatingButton</Text>
-    </View>
+    <TouchableOpacity className={`${props.styles} rounded-full bg-blue-500 flex justify-center items-center  w-14 h-14 `}>
+      <Ionicons name="add" size={22} color={"white"}/>
+    </TouchableOpacity>
   )
 }
 

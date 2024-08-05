@@ -12,9 +12,9 @@ export const setJsonValue = async(value,key)=>{
     }
 }
 
-export const getJsonValue = (key)=>{
+export const getJsonValue = async(key)=>{
     try {
-        AsyncStorage.getItem(key).then((value)=>{
+       await AsyncStorage.getItem(key).then((value)=>{
             return JSON.parse(value)
         })
     } catch (error) {
